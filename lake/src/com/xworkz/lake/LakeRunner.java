@@ -16,8 +16,23 @@ public class LakeRunner {
 		lakeDAOImpl.save("mumbai");
 		lakeDAOImpl.save("delhi");
 		lakeDAOImpl.save("gujrat");
-
 		lakeDAOImpl.printAllLakes();
+		System.out.println("===============================");
+
+		lakeDAOImpl.updateByIndex("amar", 2);
+		lakeDAOImpl.printAllLakes();
+		System.out.println("===============================");
+
+		lakeDAOImpl.updateByName("gujrat", "0");
+		lakeDAOImpl.printAllLakes();
+
+		System.out.println("===============================");
+		lakeDAOImpl.deleteByName("Btm");
+		lakeDAOImpl.printAllLakes();
+
+		System.out.println("===============================");
+	    lakeDAOImpl.deleteByIndex(2);
+	    lakeDAOImpl.printAllLakes();
 	}
 
 }

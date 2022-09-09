@@ -7,7 +7,7 @@ public class TampleRunner {
 
 	public static void main(String[] args) {
 		TampleRule tampleRule=new DarshanRule();
-		PandtiRule pandtiRule=new PandtiRule(tampleRule);
+		PandtiRule pandtiRule=new PandtiRule(tampleRule, 10);
 		pandtiRule.checkValidation();
 
 	}

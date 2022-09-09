@@ -25,4 +25,39 @@ public class LakeDAOImpl implements LakeDAO {
 
 	}
 
+	@Override
+	public boolean updateByIndex(String newlake, int index) {
+		lakeNames[index] = newlake;
+
+		return true;
+	}
+
+	@Override
+	public boolean deleteByIndex(int index) {
+	   lakeNames[index]=null;
+		return false;
+	}
+
+	@Override
+	public boolean updateByName(String name, String newName) {
+		for (int i = 0; i < lakeNames.length; i++) {
+			if (lakeNames[i] == name) {
+				lakeNames[i] = newName;
+			}
+
+		}
+		return false;
+	}
+
+	@Override
+	public boolean deleteByName(String Name) {
+		for (int i = 0; i < lakeNames.length; i++) {
+			if (lakeNames[i] == Name) {
+				lakeNames[i] = null;
+			}
+
+		}
+		return false;
+	}
+
 }
